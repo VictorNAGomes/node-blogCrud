@@ -1,0 +1,52 @@
+.card{
+    margin-top: 3rem;
+    width: 60rem;
+}
+
+.card-title, .card-body{
+    border: 1px solid rgba(0,0,0, .125);
+    padding:1rem;
+}
+.card-title{
+    border-bottom: none;
+    background-color: rgb(195, 195, 195);
+    border-radius: .6rem .6rem 0 0;
+}
+
+.card-title h2{
+    font-family: 'roboto';
+    font-weight: 400;
+    font-size: 2.1rem;
+    color: #343a40;
+}
+
+.card-body{
+    background-color: rgb(210, 210, 210);
+    border-radius: 0 0 .6rem .6rem;
+}
+
+.card-body form{
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(0,0,0, 0)
+}
+
+.card-body form input, .card-body form button{
+    padding: .6rem;
+    border-radius: .4rem;
+    font-family: 'roboto', sans-serif;
+    font-size: 1.05rem;
+}
+
+.card-body form input{
+    background-color: rgb(210, 210, 210);
+    border: 1px solid rgba(0,0,0, .125);
+    margin-bottom: 1rem;
+    color:rgb(58, 58, 58);
+}
+
+.card-body form button{
+    width:8rem;
+    background-color: #343a40;
+    color:whitesmoke;
+}
