@@ -29,7 +29,7 @@
                         <th><%= category.slug %></th>
                         <th>
                             <button>Editar</button>
-                            <form method="POST" action="/categories/delete">
+                            <form method="POST" action="/categories/delete" onsubmit="deletionConfirm(event, this)">
                                 <input type="hidden" name="id" value="<%= category.id%>">
                                 <button>Deletar</button>
                             </form>
@@ -40,4 +40,13 @@
         </table>
     </div>
 </body>
+<script>
+    function deletionConfirm( event, form){
+        event.preventDefault();
+        var decision = confirm("Você realmente deseja deletar esta categoria?");
+        if(decision){
+            form.submit();
+        }
+    }
+</script>
 </html>
