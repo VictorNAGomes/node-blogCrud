@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Crud</title>
+    <link rel="stylesheet" href="/css/newCategory.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <%- include("../../partials/navbar.ejs") %>
+    <div class="container">
+        <h2>Categorias</h2>
+        <a href="/admin/articles/new">Criar novo artigo</a>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Slug</th>
+                    <th>Categoria</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% articles.forEach(article =>{ %>
+                    <tr>
+                        <td><%= article.id %></td>
+                        <td><%= article.title %></td>
+                        <td><%= article.slug %></td>
+                        <td><%= article.category.title %></td>
+                        <td></td>
+                    </tr>
+               <% }) %>
+            </tbody>
+        </table>
+    </div>
+</body>
+<script>
+    function deletionConfirm( event, form){
+        event.preventDefault();
+        var decision = confirm("Você realmente deseja deletar esta categoria?");
+        if(decision){
+            form.submit();
+        }
+    }
+</script>
+</html>
