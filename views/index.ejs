@@ -7,7 +7,18 @@
     <link rel="stylesheet" href="/css/global.css">
 </head>
 <body>
-    <%- include("./partials/navbar.ejs") %>
-    <h1>Meu blog</h1>
+    <%- include("./partials/homeNavbar.ejs") %>
+    <div class="containe">
+        <% articles.forEach(article => { %>
+            <div class="card">
+                <div class="card-title">
+                    <h2><%= article.title %></h2>
+                </div>
+                <div class="card-body">
+                    <a href="">Ler artigo</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
 </body>
 </html>
