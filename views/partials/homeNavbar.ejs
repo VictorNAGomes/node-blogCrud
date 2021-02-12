@@ -2,4 +2,7 @@
 
 <nav class="navbar">
     <a class="a" href="/">Blog Crud</a>
+    <% categories.forEach(category => { %>
+        <a href="/category/<%= category.slug %>"><%= category.title %></a>    
+    <% }) %>
 </nav>
