@@ -7,7 +7,7 @@
     align-items: center;
 }
 
-.navbar a{
+.navbar .a{
     padding: .3rem 3rem;
     display: flex;
     align-items: center;
@@ -19,7 +19,7 @@
     font-family: 'montserrat', sans-serif;
 }
 
-.navbar a:hover {
+.navbar .a:hover {
     color: #ddd;
     border-bottom: 1px solid  #ddd;
 }
