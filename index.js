@@ -57,7 +57,7 @@ app.get("/:slug", (req, res)=>{
         if(article != undefined){
             Category.findAll().then( categories =>{
                 res.render("article", {
-                    articles: articles,
+                    article: article,
                     categories: categories
                 });
             });
