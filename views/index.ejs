@@ -8,17 +8,23 @@
 </head>
 <body>
     <%- include("./partials/homeNavbar.ejs") %>
-    <div class="containe">
-        <% articles.forEach(article => { %>
-            <div class="card">
-                <div class="card-title">
-                    <h2><%= article.title %></h2>
+    <div class="container">
+        <div class="articles">
+            <% articles.forEach(article => { %>
+                <div class="card">
+                    <div class="card-title">
+                        <h2><%= article.title %></h2>
+                    </div>
+                    <div class="card-body">
+                        <a href="/<%= article.slug %>">Ler artigo</a>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <a href="/<%= article.slug %>">Ler artigo</a>
-                </div>
+            <% }) %>
+
+            <div class="row">
+                <a href="/articles/page/1">Next >>></a>
             </div>
-        <% }) %>
+        </div>
     </div>
 </body>
 </html>
