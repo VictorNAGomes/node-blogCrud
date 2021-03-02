@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog Crud</title>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <%- include("../../partials/homeNavbar.ejs") %>
+    <div class="containe">
+        <% result.articles.rows.forEach(article => { %>
+            <div class="card">
+                <div class="card-title">
+                    <h2><%= article.title %></h2>
+                </div>
+                <div class="card-body">
+                    <a href="/<%= article.slug %>">Ler artigo</a>
+                </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
