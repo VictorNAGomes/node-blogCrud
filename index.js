@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const session = require("express-session");
+
 const connection = require("./database/database");
 
 //importing models
@@ -14,6 +16,12 @@ const usersController = require("./users/UsersController");
 
 //view engine
 app.set('view engine', 'ejs');
+
+//session
+app.use(session({
+    secret: "qualquercoisa",
+    cookie: {maxAge: 30000000}
+}))
 
 //static
 app.use(express.static('public'));
